@@ -120,7 +120,7 @@ h1{
   transition: transform .15s ease, box-shadow .15s ease;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05);
   width: 100%;
-  max-width: 400px;   /* cap width at 400px */
+  max-width: 450px;   /* cap width at 450px */
 }
 .link-card:hover{ transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,0.07); }
 .link-card:active{ transform: translateY(0); }
@@ -170,7 +170,11 @@ footer{
   text-align: center;
   color: var(--muted);
   font-size: 13px;
+  /* new: use a neutral system sans instead of MIJA */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
 }
+
 .footer-line{
   margin: 10px 0 4px;
   display: flex;
@@ -179,15 +183,11 @@ footer{
   gap: 8px;
   flex-wrap: wrap;
 }
-.footer-line img{
-  max-height: 24px;
-  width: auto;
-  vertical-align: middle;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
-}
+
+/* keep links clean; keep logos unaffected */
 .footer-line a { text-decoration: none; }
 .footer-line a:focus-visible { outline: 2px solid #999; outline-offset: 3px; }
+.footer-line img{ max-height: 24px; width:auto; object-fit:contain; }
 
 /* Larger screens */
 @media (min-width: 720px){
