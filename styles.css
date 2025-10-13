@@ -1,0 +1,194 @@
+/* ========== Theme Tokens ========== */
+:root{
+  --bg:#FFFAF0;
+  --black:#000000;
+  --ink:#060000;
+  --cf1:#EB5C5E;
+  --cf2:#72C0B5;
+  --cf3:#FFEC5C;
+  --white:#FFFFFF;
+  --muted:#8a8a8a;
+}
+
+/* ========== Webfonts (optional) ========== */
+/* Place your font files in /fonts/
+   If you have WOFF2/WOFF, prefer those. If you only have OTF/TTF, they also work. */
+
+/* MIJA — Bold (700–900) */
+@font-face {
+  font-family: "MIJA";
+  src:
+    /* Uncomment the first two lines if you add woff2/woff */
+    /* url("fonts/mija-bold.woff2") format("woff2"), */
+    /* url("fonts/mija-bold.woff") format("woff"),  */
+    url("fonts/mija-bold.otf") format("opentype");   /* OTF fallback if that’s what you have */
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
+
+/* Solomon Sans — Bold (700–900) */
+@font-face {
+  font-family: "Solomon Sans";
+  src:
+    /* url("fonts/solomon-sans-bold.woff2") format("woff2"), */
+    /* url("fonts/solomon-sans-bold.woff") format("woff"),  */
+    url("fonts/solomon-sans-bold.otf") format("opentype");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
+
+/* ========== Base ========== */
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: "MIJA","Mija","Mija Sans","Inter","system-ui","Segoe UI",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.wrap{
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 18px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 100dvh;
+}
+
+header{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+/* H1: MIJA, lowercase, black */
+h1{
+  margin: 0 0 6px 0;
+  font-family: "MIJA","Mija","Mija Sans","Inter","system-ui",sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.05;
+  color: var(--black);
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+
+/* H2/tagline: Solomon Sans, lowercase, black */
+.tagline{
+  margin: 0;
+  font-family: "Solomon Sans","Inter","system-ui",sans-serif;
+  font-weight: 800;
+  font-size: clamp(14px, 3.4vw, 18px);
+  line-height: 1.3;
+  color: var(--black);
+  text-transform: lowercase;
+  opacity: 0.9;
+}
+
+/* Links / Cards */
+.links{
+  display: grid;
+  gap: 14px;
+  margin-top: 8px;
+  justify-items: center; /* center cards when max-width applies */
+}
+
+.link-card{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 4px solid var(--ink);
+  border-radius: 9999px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 400px;   /* cap width at 400px (as per your revised HTML) */
+}
+.link-card:hover{ transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,0.07); }
+.link-card:active{ transform: translateY(0); }
+
+.logo{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #f5f5f5;
+  flex: 0 0 44px;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name{
+  font-family: "MIJA","Mija","Mija Sans","Inter","system-ui",sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.url{
+  font-size: 13px;
+  opacity: .7;
+  letter-spacing: .01em;
+}
+
+/* Per-button border colors */
+.cf1{ border-color: var(--cf1); }
+.cf2{ border-color: var(--cf2); }
+.cf3{ border-color: var(--cf3); }
+
+/* Footer */
+footer{
+  margin-top: auto;
+  padding-top: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer-line{
+  margin: 10px 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer-line img{
+  max-height: 24px;
+  width: auto;
+  vertical-align: middle;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
+.footer-line a { text-decoration: none; }
+.footer-line a:focus-visible { outline: 2px solid #999; outline-offset: 3px; }
+
+/* Larger screens */
+@media (min-width: 720px){
+  .wrap{ padding-top: 56px; gap: 26px; }
+  .links{ gap: 16px; }
+  .logo{ width: 48px; height: 48px; flex-basis: 48px; }
+  .name{ font-size: 18px; }
+  .url{ font-size: 14px; }
+}
