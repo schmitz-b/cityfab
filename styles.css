@@ -22,7 +22,7 @@
 @font-face {
   font-family: "MIJA";
   src: url("fonts/Mija-Bold.otf") format("opentype");
-  font-weight: 800; /* map 800 too so h1 resolves */
+  font-weight: 800; 
   font-style: normal;
   font-display: swap;
   font-synthesis: none;
@@ -104,7 +104,7 @@ h1{
   display: grid;
   gap: 14px;
   margin-top: 8px;
-  justify-items: center; /* center cards when max-width applies */
+  justify-items: center; 
 }
 
 .link-card{
@@ -120,7 +120,7 @@ h1{
   transition: transform .15s ease, box-shadow .15s ease;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05);
   width: 100%;
-  max-width: 450px;   /* cap width at 450px */
+  max-width: 400px;   /* cap width at 400px */
 }
 .link-card:hover{ transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,0.07); }
 .link-card:active{ transform: translateY(0); }
