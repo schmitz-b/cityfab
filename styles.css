@@ -10,36 +10,42 @@
   --muted:#8a8a8a;
 }
 
-/* ========== Webfonts (optional) ========== */
-/* Place your font files in /fonts/
-   If you have WOFF2/WOFF, prefer those. If you only have OTF/TTF, they also work. */
-
-/* MIJA — Bold (700–900) */
+/* MIJA */
 @font-face {
   font-family: "MIJA";
-  src:
-    /* Uncomment the first two lines if you add woff2/woff */
-    /* url("fonts/mija-bold.woff2") format("woff2"), */
-    /* url("fonts/mija-bold.woff") format("woff"),  */
-    url("fonts/mija-bold.otf") format("opentype");   /* OTF fallback if that’s what you have */
-  font-weight: 700 900;
+  src: url("fonts/Mija-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
+@font-face {
+  font-family: "MIJA";
+  src: url("fonts/Mija-Bold.otf") format("opentype");
+  font-weight: 800; /* map 800 too so h1 resolves */
   font-style: normal;
   font-display: swap;
   font-synthesis: none;
 }
 
-/* Solomon Sans — Bold (700–900) */
+/* Solomon Sans */
 @font-face {
   font-family: "Solomon Sans";
-  src:
-    /* url("fonts/solomon-sans-bold.woff2") format("woff2"), */
-    /* url("fonts/solomon-sans-bold.woff") format("woff"),  */
-    url("fonts/solomon-sans-bold.otf") format("opentype");
-  font-weight: 700 900;
+  src: url("fonts/Solomon-Sans-Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   font-synthesis: none;
 }
+@font-face {
+  font-family: "Solomon Sans";
+  src: url("fonts/Solomon-Sans-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
+
 
 /* ========== Base ========== */
 *{ box-sizing: border-box; }
@@ -115,7 +121,7 @@ h1{
   transition: transform .15s ease, box-shadow .15s ease;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05);
   width: 100%;
-  max-width: 400px;   /* cap width at 400px (as per your revised HTML) */
+  max-width: 450px;   /* cap width at 450px */
 }
 .link-card:hover{ transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,0.07); }
 .link-card:active{ transform: translateY(0); }
