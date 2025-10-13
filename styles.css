@@ -144,7 +144,7 @@ h1{
 .name{
   font-family: "MIJA","Mija","Mija Sans","Inter","system-ui",sans-serif;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 22px;
   line-height: 1.2;
   color: var(--ink);
   white-space: nowrap;
@@ -154,7 +154,7 @@ h1{
 
 .url{
   font-size: 13px;
-  opacity: .7;
+  opacity: .6;
   letter-spacing: .01em;
 }
 
