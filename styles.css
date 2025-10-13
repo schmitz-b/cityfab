@@ -76,29 +76,28 @@ header{
   margin-bottom: 6px;
 }
 
-/* H1: MIJA, lowercase, black */
 h1{
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;                
   font-family: "MIJA","Mija","Mija Sans","Inter","system-ui",sans-serif;
   font-weight: 800;
-  font-size: clamp(28px, 6vw, 44px);
+  font-size: clamp(32px, 7vw, 52px); 
   line-height: 1.05;
   color: var(--black);
   text-transform: lowercase;
   letter-spacing: -0.01em;
 }
 
-/* H2/tagline: Solomon Sans, lowercase, black */
 .tagline{
   margin: 0;
   font-family: "Solomon Sans","Inter","system-ui",sans-serif;
   font-weight: 800;
-  font-size: clamp(14px, 3.4vw, 18px);
-  line-height: 1.3;
+  font-size: clamp(24px, 4.8vw, 32px); 
+  line-height: 1.25;               
   color: var(--black);
   text-transform: lowercase;
   opacity: 0.9;
 }
+
 
 /* Links / Cards */
 .links{
