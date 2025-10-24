@@ -1,23 +1,25 @@
 :root{
-  --tab-red:#EB5C5E;
-  --tab-blue:#72C0B5;
+  --tab-red:#EB5C5E;   /* FR */
+  --tab-blue:#72C0B5;  /* NL */
   --tab-bg:#FFFFFF;
   --panel-bg:#FFFFFF;
   --panel-br:#d8d0c7;
 }
 
-/* Hide radios */
+/* hide radios */
 .tabs input[type="radio"]{ position:absolute; inset:-9999px; }
 
+/* tab row */
 .tablist{
   display:flex; gap:12px; align-items:flex-end; justify-content:center;
   margin:6px auto 14px;
 }
 
+/* tabs (labels) */
 .tab{
   cursor:pointer; user-select:none; padding:10px 16px;
   background:var(--tab-bg);
-  border:4px solid var(--tab-blue);
+  border:4px solid var(--tab-blue);      /* default = blue (NL) */
   border-bottom-width:4px;
   border-radius:14px 14px 0 0;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -25,16 +27,17 @@
   box-shadow:0 2px 0 rgba(0,0,0,0.05);
   transition:transform .12s, box-shadow .12s, background .12s;
 }
-.tab-fr{ border-color:var(--tab-red); }
+.tab-fr{ border-color:var(--tab-red); }   /* FR tab = red */
 .tab:hover{ transform:translateY(-1px); box-shadow:0 6px 12px rgba(0,0,0,0.06); }
 
+/* panel box */
 .panels{
   background:#fff; border:2px solid var(--panel-br);
   border-radius:18px; padding:18px 16px;
   box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
-/* Panels hidden by default; show the checked one */
+/* show the selected panel, and visually connect selected tab to panel */
 .panel{ display:none; }
 #tab-fr:checked ~ .tablist .tab-fr,
 #tab-nl:checked ~ .tablist .tab-nl{
@@ -45,7 +48,7 @@
 #tab-fr:checked ~ .panels #panel-fr{ display:block; }
 #tab-nl:checked ~ .panels #panel-nl{ display:block; }
 
-/* Typography inside panels */
+/* content typography */
 .panel h2{
   margin:0 0 8px 0;
   font-family:"MIJA","Mija","Mija Sans","Inter",system-ui,sans-serif;
