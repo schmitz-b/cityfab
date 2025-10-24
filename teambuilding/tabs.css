@@ -1,92 +1,69 @@
-/* Uses the same theme tokens and base styles from ../styles.css */
-
 :root{
-  --tab-red: #EB5C5E;   /* cityfab 1 */
-  --tab-blue:#72C0B5;   /* cityfab 2 (teal/blue) */
-  --tab-bg:  #FFFFFF;
+  --tab-red:#EB5C5E;
+  --tab-blue:#72C0B5;
+  --tab-bg:#FFFFFF;
   --panel-bg:#FFFFFF;
-  --panel-br:#d8d0c7;   /* subtle box border on FFfaf0 bg */
+  --panel-br:#d8d0c7;
 }
 
-/* Hide the radios */
+/* Hide radios */
 .tabs input[type="radio"]{ position:absolute; inset:-9999px; }
 
-/* Tablist */
 .tablist{
-  display:flex;
-  gap:12px;
-  align-items:flex-end;
-  justify-content:center;
-  margin: 6px auto 14px;
+  display:flex; gap:12px; align-items:flex-end; justify-content:center;
+  margin:6px auto 14px;
 }
 
-/* Tabs (labels) */
 .tab{
-  cursor:pointer;
-  user-select:none;
-  padding:10px 16px;
-  background: var(--tab-bg);
-  border:4px solid var(--tab-blue);   /* default blue; FR overrides below */
-  border-bottom-width: 4px;
-  border-radius: 14px 14px 0 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-weight: 600;
-  color: #0d2b2a;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  cursor:pointer; user-select:none; padding:10px 16px;
+  background:var(--tab-bg);
+  border:4px solid var(--tab-blue);
+  border-bottom-width:4px;
+  border-radius:14px 14px 0 0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-weight:600; color:#0d2b2a;
+  box-shadow:0 2px 0 rgba(0,0,0,0.05);
+  transition:transform .12s, box-shadow .12s, background .12s;
 }
-.tab-fr{ border-color: var(--tab-red); }
-.tab:hover{ transform: translateY(-1px); box-shadow: 0 6px 12px rgba(0,0,0,0.06); }
+.tab-fr{ border-color:var(--tab-red); }
+.tab:hover{ transform:translateY(-1px); box-shadow:0 6px 12px rgba(0,0,0,0.06); }
 
-/* Panels wrapper */
 .panels{
-  background: #fff;
-  border: 2px solid var(--panel-br);
-  border-radius: 18px;
-  padding: 18px 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  background:#fff; border:2px solid var(--panel-br);
+  border-radius:18px; padding:18px 16px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
-/* Panel content */
+/* Panels hidden by default; show the checked one */
 .panel{ display:none; }
 #tab-fr:checked ~ .tablist .tab-fr,
 #tab-nl:checked ~ .tablist .tab-nl{
-  background: var(--tab-bg);
-  position: relative;
-  z-index: 2;
-  /* visually attach to panel */
-  border-bottom-color: var(--panel-bg);
+  background:var(--tab-bg);
+  position:relative; z-index:2;
+  border-bottom-color:var(--panel-bg);
 }
-
 #tab-fr:checked ~ .panels #panel-fr{ display:block; }
 #tab-nl:checked ~ .panels #panel-nl{ display:block; }
 
-/* Content typography inside panels (reuse your site fonts) */
+/* Typography inside panels */
 .panel h2{
-  margin: 0 0 8px 0;
-  font-family: "MIJA","Mija","Mija Sans","Inter",system-ui,sans-serif;
-  font-weight:800;
-  font-size: clamp(22px, 4.6vw, 30px);
-  line-height:1.15;
-  color: var(--black);
+  margin:0 0 8px 0;
+  font-family:"MIJA","Mija","Mija Sans","Inter",system-ui,sans-serif;
+  font-weight:800; font-size:clamp(22px,4.6vw,30px); line-height:1.15; color:var(--black);
 }
 .panel h3{
-  margin: 18px 0 6px 0;
-  font-family: "MIJA","Mija","Mija Sans","Inter",system-ui,sans-serif;
-  font-weight:700;
-  font-size: clamp(18px, 3.6vw, 22px);
-  color: var(--ink);
+  margin:18px 0 6px 0;
+  font-family:"MIJA","Mija","Mija Sans","Inter",system-ui,sans-serif;
+  font-weight:700; font-size:clamp(18px,3.6vw,22px); color:var(--ink);
 }
 .panel p, .panel li{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #2b2b2b;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:16px; line-height:1.55; color:#2b2b2b;
 }
-.panel ul{ padding-left: 18px; margin: 8px 0; }
-.panel em{ font-style: italic; }
+.panel ul{ padding-left:18px; margin:8px 0; }
+.panel em{ font-style:italic; }
 
-@media (min-width: 720px){
-  .panels{ padding: 22px 22px; }
-  .panel p, .panel li{ font-size: 17px; }
+@media (min-width:720px){
+  .panels{ padding:22px; }
+  .panel p, .panel li{ font-size:17px; }
 }
