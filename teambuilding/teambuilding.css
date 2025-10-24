@@ -1,5 +1,5 @@
 
-  max-width: 800px;     /* overrides the 680px from styles.css */
+  max-width: 840px;     /* overrides the 680px from styles.css */
 }
 
 /* Grid: 1 column on mobile, 2 on desktop */
@@ -18,7 +18,7 @@
 
 /* Keep the wider page */
 .wrap{
-  max-width: 1100px;
+  max-width: 840px;
 }
 
 /* Always one column (mobile + desktop) */
