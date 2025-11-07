@@ -87,6 +87,22 @@ h1{
   letter-spacing: -0.01em;
 }
 
+/* Make the H1 clickable but not “link-styled” */
+h1 .home-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+h1 .home-link:hover,
+h1 .home-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+h1 .home-link:focus-visible {
+  outline: 2px solid #999;
+  outline-offset: 3px;
+}
+
 .tagline{
   margin: 0;
   font-family: "Solomon Sans","Inter","system-ui",sans-serif;
