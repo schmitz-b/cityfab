@@ -39,7 +39,7 @@
 }
 
 /* Language-specific borders (strong override) */
-.tb-panel.fr{ border: 4px solid #FFEC5C; } /* yellow */
+.tb-panel.fr{ border: 4px solid #72C0B5; } /* teal */
 .tb-panel.nl{ border: 4px solid #EB5C5E; } /* red */
 
 /* Typography inside panels */
@@ -90,7 +90,7 @@
 .tb-grid{ grid-template-columns: 1fr; }
 
 /* Accent color per language; also used by the pill label */
-.tb-panel.fr{ --accent:#FFEC5C; border: 4px solid var(--accent); }
+.tb-panel.fr{ --accent:#72C0B5; border: 4px solid var(--accent); }
 .tb-panel.nl{ --accent:#EB5C5E; border: 4px solid var(--accent); }
 
 /* Little language pill above the first line */
