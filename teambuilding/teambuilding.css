@@ -128,3 +128,56 @@
 }
 
 /* Headings stay as-is (black/ink) */
+
+/* HERO: full content width, gentle rounding */
+.tb-hero{
+  margin: 8px 0 14px 0;
+}
+.tb-hero img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+/* BOTTOM LINKS: reuse homepage buttons but fit this layout */
+.tb-links{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;   /* mobile: stacked */
+  gap: 12px;
+  justify-items: center;        /* center on small screens */
+}
+
+/* Make buttons fill column width and be a bit more compact */
+.tb-links .link-card{
+  width: 100%;
+  max-width: none;              /* override homepage 500px cap */
+  padding: 12px 14px;           /* slightly smaller paddings */
+}
+
+/* Smaller logo inside buttons for this page */
+.tb-links .logo{
+  width: 40px;
+  height: 40px;
+  flex-basis: 40px;
+}
+
+/* Optional: calmer text weights like on homepage */
+.tb-links .name,
+.tb-links .url{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+.tb-links .name{ font-weight: 500; }
+.tb-links .url { font-weight: 400; }
+
+/* Desktop: 3 across */
+@media (min-width: 900px){
+  .tb-links{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    justify-items: stretch;     /* full width in each column */
+  }
+}
+
