@@ -39,7 +39,7 @@
 }
 
 /* Language-specific borders (strong override) */
-.tb-panel.fr{ border: 4px solid #72C0B5; } /* teal/blue */
+.tb-panel.fr{ border: 4px solid #FFEC5C; } /* yellow */
 .tb-panel.nl{ border: 4px solid #EB5C5E; } /* red */
 
 /* Typography inside panels */
@@ -137,7 +137,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 18px;
+  border-radius: 3px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
 
